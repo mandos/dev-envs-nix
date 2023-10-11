@@ -8,13 +8,9 @@
         pkgs = nixpkgs.legacyPackages.x86_64-linux;
       in
       pkgs.mkShell {
-        packages = with pkgs; [
-          nixd
-          nixpkgs-fmt
+        packages = [
+          pkgs.nodePackages.bash-language-server
         ];
       };
-
-    formatter."x86_64-linux" = nixpkgs.legacyPackages.x86_64-linux.nixpkgs-fmt;
-
   };
 }
