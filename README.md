@@ -2,7 +2,7 @@
 
 Collection of development environments in nix
 
-## Usage
+# Usage
 
 In .envrc
 
@@ -11,9 +11,11 @@ In .envrc
 Where DEV is a folder with specific language.
 
 
-## Supported languages
+# Supported languages
 
-### Go
+## Go
+
+### Default
 
 Versions:
  - default: 1.20.8
@@ -28,3 +30,18 @@ Packages:
  - godef
  - golint
  - watchexec
+
+## Terraform
+
+### Default
+
+ - terraform: v1.5.3
+ - terragrunt: v0.45.13
+ - terraform-ls:
+
+### cdk
+
+ - terraform:
+ - terragrunt:
+ - terraform-ls:
+ - nodePackages_latest.cdktf-cli:
