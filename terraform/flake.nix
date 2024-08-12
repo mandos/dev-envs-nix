@@ -1,9 +1,5 @@
 {
-  description = "Lua development environment";
-
-  inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-23.05";
-  };
+  description = "Terraform and Terragrunt development environment";
 
   outputs = { self, nixpkgs }: {
 
@@ -13,9 +9,9 @@
       in
       pkgs.mkShell {
         packages = with pkgs; [
-          terraform
-          terragrunt
+          tenv
           terraform-ls
+          terraform-docs
         ];
       };
     devShells.x86_64-linux.cdk =
@@ -24,10 +20,10 @@
       in
       pkgs.mkShell {
         packages = with pkgs; [
+          tenv
           nodePackages_latest.cdktf-cli
-          terraform
-          terragrunt
           terraform-ls
+          terraform-docs
         ];
       };
   };

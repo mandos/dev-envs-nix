@@ -13,11 +13,14 @@
         v1_25.legacyPackages.x86_64-linux.kubectl
         kubernetes-helm
         k9s
+        bashInteractive
+        pluto
+        nova
       ];
 
       shellHook = ''
         # BUG: complete: command not found, have to run manually
-        . ${v1_25.legacyPackages.x86_64-linux.kubectl}/share/bash-completion/completions/kubectl.bash
+        source ${v1_25.legacyPackages.x86_64-linux.kubectl}/share/bash-completion/completions/kubectl.bash
       '';
     };
   };
